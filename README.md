@@ -17,13 +17,17 @@ About time selection you have to keep in mind that the software auto-generates r
 After all have fields been filled then you should select "OUTPUT" folder.
 Finally you can click on "Generate"
 
+
 ![Reports-Creator1](https://github.com/vagvalas/Reports-Creator/assets/19560574/acba4797-a08b-4630-b03c-94b72b626042)
 (First one goes for "TUTOR")
 
 those are generated excels.
+
 ![Reports-Creator2](https://github.com/vagvalas/Reports-Creator/assets/19560574/01bc2d5b-c80c-499a-8a0b-886948f7f64e)
 
+
 and these are the actual reports 
+
 ![Reports-Creator3](https://github.com/vagvalas/Reports-Creator/assets/19560574/fb8e7c7b-b2ec-4e16-99d3-d8fd65f1e18e)
 
 
