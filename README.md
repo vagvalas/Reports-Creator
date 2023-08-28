@@ -12,9 +12,13 @@ The other GUESTS is not meant to have an email , and the value GUEST is 'YES'
 
 # Usage
 Firstly type in the left textbox all the participants you want to be participate. 
+
 Afer that in the right you can select the start and stop date, and time
+
 About time selection you have to keep in mind that the software auto-generates random times from the start time +15 minutes and finish time +15 minutes
+
 After all have fields been filled then you should select "OUTPUT" folder.
+
 Finally you can click on "Generate"
 
 
