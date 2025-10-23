@@ -29,158 +29,233 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnOutputDir = new System.Windows.Forms.Button();
-            this.btnGenerate = new System.Windows.Forms.Button();
-            this.numericFirstHour = new System.Windows.Forms.NumericUpDown();
-            this.numericFirstMinute = new System.Windows.Forms.NumericUpDown();
-            this.numericLastHour = new System.Windows.Forms.NumericUpDown();
-            this.numericLastMinute = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFirstHour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFirstMinute)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericLastHour)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericLastMinute)).BeginInit();
-            this.SuspendLayout();
+            dtpStartDate = new DateTimePicker();
+            dtpEndDate = new DateTimePicker();
+            richTextBox1 = new RichTextBox();
+            btnOutputDir = new Button();
+            btnGenerate = new Button();
+            numericFirstHour = new NumericUpDown();
+            numericFirstMinute = new NumericUpDown();
+            numericLastHour = new NumericUpDown();
+            numericLastMinute = new NumericUpDown();
+            label1 = new Label();
+            label2 = new Label();
+            btnTemplateFile = new Button();
+            checkBoxInclude31User = new CheckBox();
+            numeric31JoinHour = new NumericUpDown();
+            numeric31JoinMinute = new NumericUpDown();
+            numeric31LeaveHour = new NumericUpDown();
+            numeric31LeaveMinute = new NumericUpDown();
+            textBoxProfessorName = new TextBox();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericFirstHour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericFirstMinute).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericLastHour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericLastMinute).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31JoinHour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31JoinMinute).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31LeaveHour).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31LeaveMinute).BeginInit();
+            SuspendLayout();
             // 
             // dtpStartDate
             // 
-            this.dtpStartDate.Location = new System.Drawing.Point(506, 51);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(157, 23);
-            this.dtpStartDate.TabIndex = 0;
-            this.dtpStartDate.ValueChanged += new System.EventHandler(this.dtpStartDate_ValueChanged);
+            dtpStartDate.Location = new Point(506, 51);
+            dtpStartDate.Name = "dtpStartDate";
+            dtpStartDate.Size = new Size(157, 23);
+            dtpStartDate.TabIndex = 0;
+            dtpStartDate.ValueChanged += dtpStartDate_ValueChanged;
             // 
             // dtpEndDate
             // 
-            this.dtpEndDate.Location = new System.Drawing.Point(506, 100);
-            this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(157, 23);
-            this.dtpEndDate.TabIndex = 1;
-            this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
+            dtpEndDate.Location = new Point(506, 100);
+            dtpEndDate.Name = "dtpEndDate";
+            dtpEndDate.Size = new Size(157, 23);
+            dtpEndDate.TabIndex = 1;
+            dtpEndDate.ValueChanged += dtpEndDate_ValueChanged;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(24, 45);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(398, 250);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            richTextBox1.Location = new Point(24, 45);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(398, 250);
+            richTextBox1.TabIndex = 2;
+            richTextBox1.Text = "";
             // 
             // btnOutputDir
             // 
-            this.btnOutputDir.Location = new System.Drawing.Point(646, 257);
-            this.btnOutputDir.Name = "btnOutputDir";
-            this.btnOutputDir.Size = new System.Drawing.Size(75, 23);
-            this.btnOutputDir.TabIndex = 3;
-            this.btnOutputDir.Text = "OUTPUT";
-            this.btnOutputDir.UseVisualStyleBackColor = true;
-            this.btnOutputDir.Click += new System.EventHandler(this.btnOutputDir_Click);
+            btnOutputDir.Location = new Point(646, 257);
+            btnOutputDir.Name = "btnOutputDir";
+            btnOutputDir.Size = new Size(75, 23);
+            btnOutputDir.TabIndex = 3;
+            btnOutputDir.Text = "OUTPUT";
+            btnOutputDir.UseVisualStyleBackColor = true;
+            btnOutputDir.Click += btnOutputDir_Click;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(646, 311);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerate.TabIndex = 4;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            btnGenerate.Location = new Point(646, 311);
+            btnGenerate.Name = "btnGenerate";
+            btnGenerate.Size = new Size(75, 23);
+            btnGenerate.TabIndex = 4;
+            btnGenerate.Text = "Generate";
+            btnGenerate.UseVisualStyleBackColor = true;
+            btnGenerate.Click += btnGenerate_Click;
             // 
             // numericFirstHour
             // 
-            this.numericFirstHour.Location = new System.Drawing.Point(669, 51);
-            this.numericFirstHour.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.numericFirstHour.Name = "numericFirstHour";
-            this.numericFirstHour.Size = new System.Drawing.Size(47, 23);
-            this.numericFirstHour.TabIndex = 5;
+            numericFirstHour.Location = new Point(669, 51);
+            numericFirstHour.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            numericFirstHour.Name = "numericFirstHour";
+            numericFirstHour.Size = new Size(47, 23);
+            numericFirstHour.TabIndex = 5;
             // 
             // numericFirstMinute
             // 
-            this.numericFirstMinute.Location = new System.Drawing.Point(722, 51);
-            this.numericFirstMinute.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.numericFirstMinute.Name = "numericFirstMinute";
-            this.numericFirstMinute.Size = new System.Drawing.Size(55, 23);
-            this.numericFirstMinute.TabIndex = 6;
+            numericFirstMinute.Location = new Point(722, 51);
+            numericFirstMinute.Maximum = new decimal(new int[] { 59, 0, 0, 0 });
+            numericFirstMinute.Name = "numericFirstMinute";
+            numericFirstMinute.Size = new Size(55, 23);
+            numericFirstMinute.TabIndex = 6;
             // 
             // numericLastHour
             // 
-            this.numericLastHour.Location = new System.Drawing.Point(669, 100);
-            this.numericLastHour.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.numericLastHour.Name = "numericLastHour";
-            this.numericLastHour.Size = new System.Drawing.Size(47, 23);
-            this.numericLastHour.TabIndex = 7;
+            numericLastHour.Location = new Point(669, 100);
+            numericLastHour.Maximum = new decimal(new int[] { 24, 0, 0, 0 });
+            numericLastHour.Name = "numericLastHour";
+            numericLastHour.Size = new Size(47, 23);
+            numericLastHour.TabIndex = 7;
             // 
             // numericLastMinute
             // 
-            this.numericLastMinute.Location = new System.Drawing.Point(722, 100);
-            this.numericLastMinute.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.numericLastMinute.Name = "numericLastMinute";
-            this.numericLastMinute.Size = new System.Drawing.Size(55, 23);
-            this.numericLastMinute.TabIndex = 8;
+            numericLastMinute.Location = new Point(722, 100);
+            numericLastMinute.Maximum = new decimal(new int[] { 59, 0, 0, 0 });
+            numericLastMinute.Name = "numericLastMinute";
+            numericLastMinute.Size = new Size(55, 23);
+            numericLastMinute.TabIndex = 8;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(581, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 15);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Start Date and time in 24-hour";
+            label1.AutoSize = true;
+            label1.Location = new Point(581, 33);
+            label1.Name = "label1";
+            label1.Size = new Size(166, 15);
+            label1.TabIndex = 9;
+            label1.Text = "Start Date and time in 24-hour";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(574, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 15);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Finish Date and time in 24-hour";
+            label2.AutoSize = true;
+            label2.Location = new Point(574, 82);
+            label2.Name = "label2";
+            label2.Size = new Size(173, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Finish Date and time in 24-hour";
+            // 
+            // btnTemplateFile
+            // 
+            btnTemplateFile.Location = new Point(506, 184);
+            btnTemplateFile.Name = "btnTemplateFile";
+            btnTemplateFile.Size = new Size(75, 23);
+            btnTemplateFile.TabIndex = 11;
+            btnTemplateFile.Text = "TEMPLATE";
+            btnTemplateFile.UseVisualStyleBackColor = true;
+            btnTemplateFile.Click += button1_Click;
+            // 
+            // checkBoxInclude31User
+            // 
+            checkBoxInclude31User.AutoSize = true;
+            checkBoxInclude31User.Location = new Point(44, 372);
+            checkBoxInclude31User.Name = "checkBoxInclude31User";
+            checkBoxInclude31User.Size = new Size(102, 19);
+            checkBoxInclude31User.TabIndex = 12;
+            checkBoxInclude31User.Text = "Include 31user";
+            checkBoxInclude31User.UseVisualStyleBackColor = true;
+            checkBoxInclude31User.CheckedChanged += checkBoxInclude31User_CheckedChanged;
+            // 
+            // numeric31JoinHour
+            // 
+            numeric31JoinHour.Location = new Point(258, 371);
+            numeric31JoinHour.Name = "numeric31JoinHour";
+            numeric31JoinHour.Size = new Size(120, 23);
+            numeric31JoinHour.TabIndex = 13;
+            // 
+            // numeric31JoinMinute
+            // 
+            numeric31JoinMinute.Location = new Point(384, 372);
+            numeric31JoinMinute.Name = "numeric31JoinMinute";
+            numeric31JoinMinute.Size = new Size(120, 23);
+            numeric31JoinMinute.TabIndex = 14;
+            // 
+            // numeric31LeaveHour
+            // 
+            numeric31LeaveHour.Location = new Point(258, 406);
+            numeric31LeaveHour.Name = "numeric31LeaveHour";
+            numeric31LeaveHour.Size = new Size(120, 23);
+            numeric31LeaveHour.TabIndex = 15;
+            // 
+            // numeric31LeaveMinute
+            // 
+            numeric31LeaveMinute.Location = new Point(384, 406);
+            numeric31LeaveMinute.Name = "numeric31LeaveMinute";
+            numeric31LeaveMinute.Size = new Size(120, 23);
+            numeric31LeaveMinute.TabIndex = 16;
+            // 
+            // textBoxProfessorName
+            // 
+            textBoxProfessorName.Location = new Point(24, 332);
+            textBoxProfessorName.Name = "textBoxProfessorName";
+            textBoxProfessorName.Size = new Size(398, 23);
+            textBoxProfessorName.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(24, 308);
+            label3.Name = "label3";
+            label3.Size = new Size(122, 21);
+            label3.TabIndex = 18;
+            label3.Text = "Professor Name";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericLastMinute);
-            this.Controls.Add(this.numericLastHour);
-            this.Controls.Add(this.numericFirstMinute);
-            this.Controls.Add(this.numericFirstHour);
-            this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.btnOutputDir);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dtpEndDate);
-            this.Controls.Add(this.dtpStartDate);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
-            this.Text = "Reports Creator";
-            ((System.ComponentModel.ISupportInitialize)(this.numericFirstHour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericFirstMinute)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericLastHour)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericLastMinute)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(textBoxProfessorName);
+            Controls.Add(numeric31LeaveMinute);
+            Controls.Add(numeric31LeaveHour);
+            Controls.Add(numeric31JoinMinute);
+            Controls.Add(numeric31JoinHour);
+            Controls.Add(checkBoxInclude31User);
+            Controls.Add(btnTemplateFile);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(numericLastMinute);
+            Controls.Add(numericLastHour);
+            Controls.Add(numericFirstMinute);
+            Controls.Add(numericFirstHour);
+            Controls.Add(btnGenerate);
+            Controls.Add(btnOutputDir);
+            Controls.Add(richTextBox1);
+            Controls.Add(dtpEndDate);
+            Controls.Add(dtpStartDate);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Form1";
+            Text = "Reports Creator";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)numericFirstHour).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericFirstMinute).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericLastHour).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericLastMinute).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31JoinHour).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31JoinMinute).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31LeaveHour).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numeric31LeaveMinute).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -197,5 +272,13 @@
         private NumericUpDown numericLastMinute;
         private Label label1;
         private Label label2;
+        private Button btnTemplateFile;
+        private CheckBox checkBoxInclude31User;
+        private NumericUpDown numeric31JoinHour;
+        private NumericUpDown numeric31JoinMinute;
+        private NumericUpDown numeric31LeaveHour;
+        private NumericUpDown numeric31LeaveMinute;
+        private TextBox textBoxProfessorName;
+        private Label label3;
     }
 }
